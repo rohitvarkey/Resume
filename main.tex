@@ -1,0 +1,188 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{}{Rohit Varkey Thankachan}{
+\href{mailto:rohitvarkey@gatech.edu}{rohitvarkey@gatech.edu} | 404.579.3137\\
+\urlstyle{same}\url{https://rohitvarkey.github.io} | \href{https://github.com/rohitvarkey}{github.com/rohitvarkey} \\ 
+\url{https://linkedin.com/in/rohitvarkey}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.48\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\runsubsection{Georgia Institute of Technology\\}
+\descript{Masters in Computer Science}
+\location{Expected May 2018 | Atlanta, GA}
+\sectionsep
+
+\runsubsection{National Institute of Technology Karnataka\\}
+\descript{Bachelors in Computer Engineering}
+\location{May 2016 | GPA: 8.4/10.0 | Surathkal, India }
+
+\section{Experience}
+
+\runsubsection{Julia Summer of Code}
+\descript{| Open Source Contributor }
+\location{June 2015 – Aug 2015 | Remote, Kochi, India}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item One of 9 students chosen worldwide as part of the JSoC program, sponsored by the Moore Foundation and MIT.
+\item Created a Julia package,Compose3D.jl for 3D declarative graphics. 
+\item Implemented custom web components for three.js using Google's Polymer library. 
+\item Using the three.js custom web components, created ThreeJS.jl to create 3D graphics for the web directly from Julia.
+\item Developed applications to render surf and mesh plots interactively based on ThreeJS.jl.
+\item \href{https://github.com/rohitvarkey/ThreeJS.jl}{https://github.com/rohitvarkey/ThreeJS.jl}
+\item \href{https://github.com/rohitvarkey/Compose3D.jl}{https://github.com/rohitvarkey/Compose3D.jl}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{RapidValue Solutions}
+\descript{| Software Intern }
+\location{May 2014 – June 2014 | Kochi, India}
+\begin{tightemize}
+\item Worked on iBeacon technology.
+\item Created a Proof Of Concept application to demonstrate applications of iBeacon Technology in retail.
+\item The PoC was further developed into a full fledged product.
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+\custombold{Programming:} Python \textbullet{} C \textbullet{} UNIX shell \textbullet{} C++ \textbullet{} JavaScript \textbullet{} Julia \textbullet{} \LaTeX\\
+\custombold{Web Development:} Django \textbullet{} REST APIs \textbullet{} Nginx \textbullet PostgreSQL \textbullet  HTML \textbullet{} CSS \textbullet{} Polymer \textbullet Meteor \textbullet Node.js \textbullet Bower \textbullet Bootstrap3 
+\section{Presentations}
+\runsubsection{JuliaCon 2016}
+\descript{| MIT, Cambridge, MA}
+\location{ThreeJS.jl: Interactive 3D Graphics in the Browser using Julia}
+
+\runsubsection{JuliaCon India 2015}
+\descript{| Bangalore, India}
+\location{ Interactive 3D Visualizations in Julia}
+
+\runsubsection{JuliaCon 2015}
+\descript{| MIT, Cambridge, MA (over video)}
+\location{Compose3D.jl}
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.49\textwidth} 
+
+\section{Projects}
+
+\runsubsection{Smriti}
+\descript{| A Portal for college memories}
+\sectionsep
+\begin{tightemize}
+\item Wrote scripts to parse Google form data, create users with random passwords and send out emails to 900 students.
+\item Developed a web portal for testimonials to be shared using Django.
+\item Generated PDFs of profiles of each student to provide personalized hard copies for every student.
+\end{tightemize}
+
+\runsubsection{Healthizen}
+\descript{| Synergy for a pristine Bengaluru}
+\begin{tightemize}
+\item Developed a web application to crowdsource health and sanitary issue reports in Bangalore in association with the Karnataka State Government.
+\item Implemented the backend in Django with a REST API.
+\item Ran database migrations on the production server successfully.
+\item \href{http://healthizen.org/}{http://healthizen.org/}
+\end{tightemize}
+
+\runsubsection{Phosphene}
+\descript{| A Python music processing library for hand made devices}
+\begin{tightemize}
+\item Added support for realtime music processing.
+\item Implemented the reactive paradigm, providing users with a natural way to work with music signals.
+\item Interfaced with several electronic devices to manipulate them according to the music using serial communication.
+\item \href{https://github.com/rohitvarkey/phosphene}{https://github.com/rohitvarkey/phosphene}
+\end{tightemize}
+
+\runsubsection{TJNite}
+\descript{| Colors on phones with the beat}
+\begin{tightemize}
+\item Developed an application to sync colors on the crowds phones in tune with the beat of the music being played.
+\item Maintained websockets connections to push updates to mobile browsers.
+\item \href{https://github.com/rohitvarkey/TJNite}{https://github.com/rohitvarkey/TJNite}
+\end{tightemize}
+\section{Publications}
+\href{http://link.springer.com/article/10.1007/s13278-015-0274-0}{[1] Pranav Thulasiram Bhat , \custombold{Rohit Varkey Thankachan}, and K. Chandrasekaran. \textbf{"Sharding distributed social databases using social network analysis."} Social Network Analysis and Mining 5.1 (2015): 1-11.}
+\section{Leadership}
+\sectionsep
+\begin{tightemize}
+\item \custombold{President} and \custombold{Code Special Interest Group Head} | Institution of Engineers NITK Chapter, 2015-2016
+\item \custombold{Joint Convenor} | Technites, Engineer NITK 2015
+\end{tightemize}
+\end{minipage} 
+\end{document}  \documentclass[]{article}
